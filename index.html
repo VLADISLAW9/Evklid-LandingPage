@@ -11,7 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="JS/index.js"></script>
+    <script defer src="JS/tabs.js"></script>
+    <script defer src="JS/scroll.js"></script>
     <title>Евклид</title>
 </head>
 
@@ -26,19 +29,19 @@
         </a>
         <ul class="menu__list">
             <li class="menu__link">
-                <a class="menu__item" href="#">О нас</a>
+                <a class="menu__item" href="#about">О нас</a>
             </li>
             <li class="menu__link">
-                <a class="menu__item" href="#">Проекты</a>
+                <a class="menu__item" href="#projects">Проекты</a>
             </li>
             <li class="menu__link">
-                <a class="menu__item" href="#">Этапы</a>
+                <a class="menu__item" href="#steps">Этапы</a>
             </li>
             <li class="menu__link">
-                <a class="menu__item" href="#">Отзывы</a>
+                <a class="menu__item" href="#coments">Отзывы</a>
             </li>
             <li class="menu__link">
-                <a class="menu__item" href="#">Контакты</a>
+                <a class="menu__item" href="#contacts">Контакты</a>
             </li>
         </ul>
     </div>
@@ -58,19 +61,19 @@
             <nav class="nav header__nav">
                 <ul class="nav__list">
                     <li class="nav__link">
-                        <a class="nav__item" href="#">О нас</a>
+                        <a class="nav__item" href="#about">О нас</a>
                     </li>
                     <li class="nav__link">
-                        <a class="nav__item" href="#">Проекты</a>
+                        <a class="nav__item" href="#projects">Проекты</a>
                     </li>
                     <li class="nav__link">
-                        <a class="nav__item" href="#">Этапы</a>
+                        <a class="nav__item" href="#steps">Этапы</a>
                     </li>
                     <li class="nav__link">
-                        <a class="nav__item" href="#">Отзывы</a>
+                        <a class="nav__item" href="#coments">Отзывы</a>
                     </li>
                     <li class="nav__link">
-                        <a class="nav__item" href="#">Контакты</a>
+                        <a class="nav__item" href="#contacts">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -85,7 +88,7 @@
             </a>
         </div>
     </header>
-    <main class="main">
+    <main id="projects" class="main">
         <section class="section-hero">
             <div class="container .section-hero__container swiper">
                 <!-- Additional required wrapper -->
@@ -114,7 +117,7 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        <section class="section-about-us">
+        <section id="about" class="section-about-us">
             <div class="container section-about-us__container">
                 <h1 class="section-heading section-about-us__section-heading">О нас</h1>
                 <p class="section-description section-about-us__section-description">Также как перспективное
@@ -162,49 +165,103 @@
                 </div>
             </div>
         </section>
-        <section class="section-working">
+        <section id="steps" class="section-working">
             <div class="container section-working__container">
                 <h1 class="section-heading section-working__section-heading">Как мы работаем</h1>
                 <ul class="steps section-working__steps">
                     <li class="steps__item">
-                        <a class="steps__link" href="#">1 шаг</a>
+                        <button class="steps__link" data-path="one" href="#">1 шаг</button>
                     </li>
                     <li class="steps__item">
-                        <a class="steps__link" href="#">2 шаг</a>
+                        <button class="steps__link" data-path="two" href="#">2 шаг</button>
                     </li>
                     <li class="steps__item">
-                        <a class="steps__link" href="#">3 шаг</a>
+                        <button class="steps__link" data-path="three" href="#">3 шаг</button>
                     </li>
                     <li class="steps__item">
-                        <a class="steps__link" href="#">4 шаг</a>
+                        <button class="steps__link" data-path="four" href="#">4 шаг</button>
                     </li>
                 </ul>
-                <img class="section-working__content__img" src="img/working1.jpg" alt="">
                 <div class="section-working__content">
-                    <div class="section-working__description">
-                        <h3 class="section-content-heading">Проводим консультацию</h3>
-                        <p class="section-content-text">
-                            Влечёт за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках
-                            спецификации современных стандартов, некоторые особенности внутренней политики будут
-                            объективно рассмотрены соответствующими инстанциями.
-                            А также представители современных социальных резервов, инициированные исключительно
-                            синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей
-                            картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой
-                            серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство,
-                            нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако
-                            конкретные выводы, разумеется, призваны к ответу.
-                        </p>
-                        <div class="section-working__btns">
-                            <a class="section-working__btn section-working__btn_oran" href="#">Подробнее</a>
-                            <a class="section-working__btn section-working__btn_black" href="#">Договор</a>
+                    <div data-target="one" class="tab-content tab-is-active">
+                        <div class="section-working__description">
+                            <h3 class="section-content-heading">Проводим консультацию</h3>
+                            <p class="section-content-text">
+                                Влечёт за собой процесс внедрения и модернизации приоритизации разума над эмоциями.
+                                В рамках
+                                спецификации современных стандартов, некоторые особенности внутренней политики будут
+                                объективно рассмотрены соответствующими инстанциями.
+                                А также представители современных социальных резервов, инициированные исключительно
+                                синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей
+                                картины, реплицированные с зарубежных источников, современные исследования подвергнуты
+                                целой
+                                серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство,
+                                нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако
+                                конкретные выводы, разумеется, призваны к ответу.
+                            </p>
+                        </div>
+                        <div class="section-working__img target-one">
                         </div>
                     </div>
-                    <div class="section-working__img">
+                    <div data-target="two" class="tab-content  ">
+                        <div class="section-working__description ">
+                            <h3 class="section-content-heading">Составляем смету</h3>
+                            <p class="section-content-text">
+                                Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации
+                                современных стандартов, некоторые особенности внутренней политики будут объективно
+                                рассмотрены соответствующими инстанциями. А также представители современных социальных
+                                резервов, инициированные исключительно синтетически, ограничены исключительно образом
+                                мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных
+                                источников, современные исследования подвергнуты целой серии независимых исследований.
+                            </p>
+
+                        </div>
+                        <div class="section-working__img target-two">
+                        </div>
                     </div>
+                    <div data-target="three" class="tab-content">
+                        <div class="section-working__description ">
+                            <h3 class="section-content-heading">Привлекаем подрядчиков</h3>
+                            <p class="section-content-text">
+                                Идейные соображения высшего порядка, а также новая модель организационной деятельности
+                                требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения
+                                представителей целевой аудитории является чётким доказательством простого факта:
+                                высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений
+                                развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной
+                                деятельности говорит о возможностях системы массового участия. Принимая во внимание
+                                показатели успешности, постоянное информационно-пропагандистское обеспечение нашей
+                                деятельности позволяет выполнить важные задания по разработке прогресса
+                                профессионального сообщества.
+                            </p>
+
+                        </div>
+                        <div class="section-working__img target-three">
+                        </div>
+                    </div>
+                    <div data-target="four" class="tab-content">
+                        <div class="section-working__description ">
+                            <h3 class="section-content-heading">Инспектируем все этапы работ</h3>
+                            <p class="section-content-text">
+                                Высокий уровень вовлечения представителей целевой аудитории
+                                является чётким доказательством простого факта: высококачественный прототип будущего
+                                проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый
+                                опыт говорит нам, что новая модель организационной деятельности говорит
+                                о возможностях системы массового участия. Принимая во внимание показатели успешности,
+                                постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
+                            </p>
+                        </div>
+                        <div class="section-working__img target-four">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="section-working__btns">
+                    <a class="section-working__btn section-working__btn_oran" href="#">Подробнее</a>
+                    <a class="section-working__btn section-working__btn_black" href="#">Договор</a>
                 </div>
             </div>
         </section>
-        <section class="section-quest">
+        <section id="coments" class="section-quest">
             <div class="container section-quest__container">
                 <h1 class="section-heading">Часто задаваемые вопросы</h1>
                 <div class="questions section-quest__questions">
@@ -317,7 +374,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer id="contacts" class="footer">
         <div class="container footer__container">
             <ul class="footer__list">
                 <li class="footer__item footer__item_left">
@@ -375,7 +432,6 @@
             </ul>
         </div>
     </footer>
-    <script src="JS/index.js"></script>
 </body>
 
 </html>
